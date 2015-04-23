@@ -53,3 +53,4 @@ narrow_data$activity<- activity_integer
 narrow_data_grouped <- group_by(narrow_data,activity,user)
 # now compute average
 
+result <- summarise_each(narrow_data_grouped,funs(mean))
